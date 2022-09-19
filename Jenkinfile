@@ -1,0 +1,5 @@
+node('node01'){
+    stage('prepare'){
+         git credentialsId: 'Github-usr-pwd', url: 'https://github.com/Devops-self-training/jenkins_series-helloworld-java-maven'
+    }
+}
