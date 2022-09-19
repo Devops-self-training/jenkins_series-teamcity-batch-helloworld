@@ -3,7 +3,10 @@ node('node01'){
          git credentialsId: 'Github-usr-pwd', url: 'https://github.com/Devops-self-training/jenkins_series-teamcity-batch-helloworld'
     }
 
-    stage('testing'){
-        sh 'echo "helloworld"'
+    stage('Grant the file'){
+        sh 'chmod x+r ./build.bat'
+    }
+    stage('run the file'){
+        sh './build.bat'
     }
 }
