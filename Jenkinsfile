@@ -4,7 +4,7 @@ node('node01'){
     }
 
     stage('Grant the file'){
-        sh 'chmod x+r ./build.bat'
+        sh 'chmod +xr ./build.bat'
     }
     stage('run the file'){
         sh './build.bat'
